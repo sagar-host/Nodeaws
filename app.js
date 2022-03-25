@@ -42,7 +42,7 @@ saveUninitialized: false
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb://localhost:27017/userDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://user_07:user_07@cluster0.0unbd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/userDB", {useNewUrlParser: true});
 
 //create userschema
 // const userSchema = {
@@ -100,7 +100,7 @@ passport.use(new GoogleStrategy(
     {
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "http://localhost:4000/auth/google/secrets",
+    callbackURL: "https://oauth100.herokuapp.com/auth/google/secrets",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
    
   },
