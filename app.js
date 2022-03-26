@@ -42,7 +42,7 @@ saveUninitialized: false
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://user_07:user_07@cluster0.0unbd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/userDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://user_07:user_07@cluster0.0unbd.mongodb.net/userDB?retryWrites=true&w=majority", {useNewUrlParser: true});
 
 //create userschema
 // const userSchema = {
