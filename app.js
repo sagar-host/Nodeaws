@@ -1,7 +1,7 @@
 //jshint esversion:6
 //level3
 //create .env file
-require('dotenv').config()
+const dotenv = require('dotenv')
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -19,6 +19,8 @@ const passport = require("passport")
 const passportLocalMongoose = require("passport-local-mongoose");
 
 const app = express();
+
+dotenv.config();
 
 //refer documentaion .env 
 // console.log(process.env.API_KEY);
