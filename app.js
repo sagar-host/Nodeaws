@@ -278,7 +278,7 @@ app.post("/login", function(req,res){
 //make google credential then id and client id paste in env file
 
 
-app.listen(4000, function(){
+app.listen(process.env.PORT || 4000, function(){
     console.log('server started on port 4000');
     
 })
